@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 
 app.get("/", (req, res) => {
-  res.send("hello hell!")
+  res.send("WELCOME TO SYNACS")
 })
 
 app.listen(3000, () => {
@@ -13,12 +13,12 @@ let Discord = require("discord.js")
 let client = new Discord.Client()
 
 client.on("ready", () => {
-  client.user.setPresence({ activity: { name: "With ♛尺〇れれ工乇❥"}, status: "dnd" })
+  client.user.setPresence({ activity: { name: "With ♛尺〇れれ工乇❥"}, status: "online" })
 })
 
 client.on("guildMemberAdd", member => {
-  if(member.guild.id === "733230582242213929") {
-    client.channels.cache.get("733243597570179113").send(`Welcome Dude Please Follow The ${member}!`)
+  if(member.guild.id === "990643565292032040") {
+    client.channels.cache.get("990840217382563880").send(`Welcome Dude Please Follow The ${member}!`)
   }
 })
 
@@ -28,9 +28,12 @@ client.on('guildMemberRemove', member => {
 client.on("message", message => {
   if(message.content === "Hey" || message.content === "hello" ||
 message.content === "hi" || message.content === "HI" ||message.content === "hey") {
-  message.channel.send("Hello")}
+  message.channel.send("Hey There!! How Are You?" + " " + message.author.username)}
+  if(message.content === "Im fine" || message.content === "i am fine" || message.content === 'im fine' || message.content === "IM FINE" || message.content === 'fine' || message.content === 'FINE' || message.content === 'Fine') {
+    message.channel.send("Thats Great" + " " + message.author.username)
+  }
 
-if(message.content === "d!embed") {
+if(message.content === "~embed") {
     let embed = new Discord.MessageEmbed()
     .setTitle("This is Embed Title")
     .setDescription("This is Embed description")
@@ -38,120 +41,118 @@ if(message.content === "d!embed") {
     .setFooter("This is Embed Footer")
     message.channel.send(embed);
 }
-if(message.content === "sama" || message.content === "SAMA" || message.content === "Sama") {
-  message.channel.send("SABKA MAMA")
+if (message.content === 'thuglife' || message.content === 'Thuglife') {
+  message.channel.send("Hello Chicks")
 }
-if(message.content === "void" || message.content === "Void") {
-  message.channel.send("Gand Dedo")
+if(message.content === "suswat" || message.content === "Suswat" || message.content === " SUSWAT") {
+  message.channel.send("IITian")
 }
-if(message.content === "amaan" || message.content === 'AMAAN' || message.content === "Amaan" || message.content === 'Makaan Malik') {
+if(message.content === "void" || message.content === "Void" || message.content === "pote" || message.content === "Pote") {
+  message.channel.send("Pote Hoon Bc")
+}
+if(message.content.startsWith("bsdk")) {
+  message.channel.send("Tu Bhosdiwala")
+}
+if(message.content ==='hiya') {
+    message.channel.send('hello' + ' '  + message.author.username)
+}
+if(message.content === 'doom' || message.content === 'Doom' || message.content === 'DOOM') {
+  message.channel.send("Hello im feeling hungry")
+}
+if(message.content === "amaan" || message.content === 'AMAAN' || message.content === "Amaan") {
   message.channel.send("AAj Bahut Workout Kiya! Samose Tasty Thee")
 }
-if(message.content === "lurching" || message.content === "Lurching") {
-  message.channel.send("Kya banana hai bhai?")
+if(message.content === "lurching" || message.content === "Lurching" || message.content === "lurch" || message.content === 'Lurch') {
+  message.channel.send("I'm Radiant #1")
 }
-if(message.content === "rookie" || message.content === "rookiemag" || message.content === "Rookiemag" || message.content === "Rookie") {
-  message.channel.send("Chaat raha hoga galaxy ki")
-}
-if(message.content === "boss" || message.content === "Boss" || message.content === "BOSS" || message.content === "bossy" || message.content === "BOSSY" || message.content === "Bossy" ) {
-  message.channel.send("MR.BOSS SUPERIOR")
+if(message.content === "Broken" || message.content === "broken") {
+  message.channel.send("Gand Lelo Pls")
 }
 if(message.content === "Wtf" || message.content === "wtf" || message.content === "WTF") {
-    message.channel.send("FuckOff")
+    message.channel.send("Fuck Off")
+}
+if(message.content === 'Nou' || message.content === 'no u' || message.content === 'nou') {
+  message.channel.send("Tu Hi Hai Bhai Nou Nou mat kar")
+}
+if(message.content === 'inf'|| message.content === 'INF') {
+  message.channel.send("I bought New knife skin")
 }
 if(message.content === "KS" || message.content === "ks" || message.content === "Killer spree" || message.content === "killer spree") {
   message.channel.send("VC AJAO AGAR HACKER BOLNA HAI TO")
 }
+if(message.content === 'link' || message.content === 'Link'|| message.content === 'renegades') {
+  message.channel.send("https://discord.gg/fNRpktEKxT")
+}
+if(message.content.includes("ronnie") || message.content.includes("Ronnie")) {
+  message.channel.send("Kya kaam hai bhai?")
+}
 if(message.content === "happy holi" || message.content === "Happy Holi" || message.content === "Holi") {
     message.channel.send("Same To You!")
 }
+if(message.content.includes("happy diwali") || message.content.includes('Happy Diwali')) {
+  message.channel.send("Same To You Mate!!!! :heart:")
+}
 if(message.content === "gurjar" || message.content === "GURJAR" || message.content === "Gurjar") {
-  message.channel.send("KEEDA MAKODA SAMAJH RAHE HO")
+  message.channel.send("BACHON WALI HARKATIEN KARTA HOON ZRA KUCHH BOLO ABHI SERVER LEAVE KARDUNGA")
 } 
 if(message.content === 'intruder' || message.content === "Intruder" || message.content === "INTRUDER") {
   message.channel.send("Ki haal Ne Maharaaj")
-}   
-if(message.content === "deathknell" || message.content === "DEATHKNELL" || message.content === "dk" || message.content === "DK") {
-    message.channel.send("BHOS DK")
 }
-if(message.content === "ben10" || message.content === "BEN10" || message.content === "Ben 10" || message.content === "behen 10" || message.content === "Aladdin" || message.content === "aladdin"
-|| message.content === "kommander" || message.content === "Ben10" || message.content === "Aiyaar Zafar" || message.content === "aiyaar zafar") {
-    message.channel.send("GADDAR SALA DESH DROHI")
-}
-if(message.content === "DE4TH" || message.content === "death" || message.content === "Death") {
-  message.channel.send("GOD OF DEATH, NOW RUN")
-}
-if(message.content === "MADARA" || message.content === "madara" || message.content === "Madara" || message.content === "ph madara" || message.content === "PH madara" || message.content === "madara"
-|| message.content === "PH MADARA") {
-    message.channel.send("CRY BABY ALWAYS CRY FOR HACKER") 
-}
-if(message.content === "ID" || message.content === "Indonesia" || message.content === "INDONESIA") {
-  message.channel.send("NOOB SHEET COUNTRY")
-} 
-if(message.content === "Galih Kurnia" || message.content === "galih kurnia" || message.content === "PB14" || message.content === "bang jago") {
-  message.channel.send("Studies School In University How Pro They Are. Want To Become President? Then Please  Visit INDONESIA")
-}
+/*if(message.content === 'hio') {
+  let a = message.
+  message.channel.send(`${user} hi`)
+} */
 if(message.content === "bro" || message.content === "bruh" || message.content === "BRUH" || message.content === "BRO") {
-  message.channel.send("KYA HAAL CHICHA")
-}  
-if(message.content === "Mr.x" || message.content === "ronnie" || message.content === "mrx" || message.content === "RONNIE") {
-    message.channel.send("HACKING")
-}
-if(message.content === "sevy" || message.content === "severence" || message.content === "SEVY" || message.content === "sijo") {
-  message.channel.send("BISH")
+  message.channel.send("Yes Brother!!")
 }
 if(message.content === "thunder" || message.content === "Thunder" || message.content === "THUNDER") { message.channel.send("Lafandar")
 }
-if(message.content === "thuglife" || message.content === "THUGLIFE" ||
+if(message.content === "Yoyo" || message.content === "YoYo" ||
 message.content === "YOYO" || message.content === "yoyo") {
   message.channel.send("douknowme")
 }
 if(message.content === "sb?" || message.content === "SB" || message.content === "search sb" || message.content === "sb") {
-  message.channel.send("No SB WITH NOOBS SO FK OFF")
+  message.channel.send("SB kya String Buffer?")
 }
-if(message.content === "huehuehue" || message.content === "huehuehuehue") {
-  message.channel.send("KYA HAS RAHA HAI BE")
-}        
-if(message.content === "d!nickname") {
+if(message.content === "~nickname") {
   let nicknames = ["dumbass", "noob", "newbie", "d!cknell", "ponnu", "karan lodu", "GOD OF MC5"]
 message.channel.send(`${nicknames[Math.floor(Math.random() * nicknames.length)]} is your new nickname`)
-}
-if(message.content === "maskman" || message.content === "Maskman") {
-  message.channel.send("Ladki Dilado Bhai")
-}
-if(message.content === "mrx is noob" || message.content === "MRX NOOB" || message.content === "Mrx is noob" || message.content === "noob") {
-  message.channel.send("TU BDA PRO HAI?")
 }
 if(message.content === "owo" || message.content === "UwU" || message.content === "OwO" || message.content === "uwu") {
   message.channel.send("OwO What Is This?")
 }
-if(message.content === "KARAN" || message.content === "karan" || message.content === "knight" || message.content === "mr.knight" || message.content === "Karan") {
-  message.channel.send("Karan Se Fight! Karan Kardega Teri Gand Tight!")
-}
-if(message.content === "bad ping" || message.content == "Bad ping") {
-  message.channel.send("Ping To Mera 10ms hai Lekin Sabko Hosla Dene Ke Liye Bad Ping Naam Hai")
-}
-if(message.content.startsWith("d!kill")) {
+if(message.content.startsWith("~kill")) {
   let victim = message.mentions.users.first()
   if(!victim) message.reply("Mention someone to kill")
   else {
     message.channel.send(`${victim} Died RIP`)
   }
 }
-if(message.content === 'shreya' || message.content === "Shreya" || message.contenet === 'SHREYA') {
-  message.channel.send("KARAN KI BANDI HOON LADOGE?")
+if(message.content.startsWith("shu")) {
+  let a = message.mentions.users.first() 
+  if(!a) message.reply(' ' + 'shu')
+  else {
+    message.channel.send(`${a}` + `Hey Im Shu27`)
+  }
 }
-if(message.content === 'Shanty' || message.content === 'shanty' ) {
-  message.channel.send("Kya Haal Hai Chhore?")
-}
-if(message.content === "sonali" || message.content === "Sonali") {
-  message.channel.send("I love You Karan")
-}
-if(message.content === "kaun hai tu") {
-  message.channel.send("Main Tera Peo")
-}
-if(message.content === "Biswa" || message.content === "biswa" || message.content === "BISWA") {
-  message.channel.send("CM Saheb")
+  const Math = require('math.js');
+if(message.content.startsWith("d!p")) {
+   images = [
+     "https://tenor.com/view/mochi-cat-vans-gif-21776348",
+     "https://tenor.com/view/peachandgoma-peachmad-couplegoals-peach-and-gif-22394109"
+   ]
+
+     personHugged = message.mentions.users.first()
+      if(personHugged){
+      let hugEmbed = new Discord.MessageEmbed()
+          .setTitle(`Punched ${personHugged.username} :punch:`)
+          .setImage(images[Math. floor(Math. random()*images. length)])
+          .setTimestamp()
+          message.channel.send(hugEmbed)
+      }
+      else{
+        message.channel.send('That person is not in this guild')
+      }
 }
 if(message.content.startsWith("how gay")) {
  let gayrate = ["0%", "9%", "19%", "25%", "98%", "96%", "5%", "63%", "43%", "36%", "67%", "61%", "52%", "59%", "77%", "84%", "81%", "12%", "100%", "21%"]
@@ -161,22 +162,20 @@ if(message.content.startsWith("how gay")) {
  message.channel.send(`${victim} e ${gayrate[Math.floor(Math.random() * gayrate.length)]} Gay :rainbow_flag: `)
  }
 }
-if(message.content.startsWith("d!hug")) {
+if(message.content.startsWith("~hug")) {
  let l = message.mentions.users.first()
  if(!l) message.reply("Please Mention someone to Hug")
  else {
  message.channel.send(` https://media.tenor.com/images/afbc39fcc4cbe67d9622f657d60d41cf/tenor.gif You Hugged ${l}`)
  }
 }
-if(message.content === "Huda" || message.content === "huda") { message.channel.send("Bdia?")
-}
 if(message.content === "owner" || message.content === "Who is the owner?") {
-  message.channel.send("♛尺〇れれ工乇❥#4316")
+  message.channel.send("♛尺〇れれ工乇❥#1425")
 }
 if(message.content === "invite" || message.content === "Invite" || message.content === "INVITE") {
   message.channel.send("https://discord.gg/bhSnjJ8fgR")
 }
-if(message.content.startsWith("d!cuddle")) {
+if(message.content.startsWith("~cuddle")) {
  let l = message.mentions.users.first()
  if(!l) message.reply("Please Mention someone to Cuddle")
  else {
@@ -186,10 +185,7 @@ if(message.content.startsWith("d!cuddle")) {
 if(message.content === "gm" || message.content === "GM" || message.content === "Gm") {
   message.channel.send("GOOD MORNING! HAVE A NICE DAY")
 }
-if(message.content === "shadow" || message.content === "SHADOW" || message.content === "Shadow") {
-  message.channel.send("Angel Priya Of Discord")
-}
-if(message.content.startsWith("d!punch")) {
+if(message.content.startsWith("~punch")) {
  let l = message.mentions.users.first()
  if(!l) message.reply("Please Mention someone to Punch")
  else {
@@ -197,25 +193,12 @@ if(message.content.startsWith("d!punch")) {
  }
 }
 if(message.content === "gn" || message.content === "GN" || message.content === "Gn") {
-  message.channel.send("Sweet Dreams : )")
-} 
-if (message.content.startsWith("d!kick")) {
- if (message.member.hasPermission("KICK_MEMBERS")) {
- let member = message.mentions.members.first()
- if (!member) message.channel.send("Please mention someone")
- else {
- member.kick().then(mem => {
- message.channel.send(`Kicked ${mem.user.username}!`)
- })
- }
- } else {
- message.reply("You don't have the permission to do that...")
- }
- }
- if (message.content === "d!avatar" || message.content === "d!Avatar" || message.content === "d!AVATAR") { 
+  message.channel.send("Sweet Dreams :)")
+}
+ if (message.content === "~avatar" || message.content === "~Avatar" || message.content === "~AVATAR" || message.content === '~avatar') { 
  let embed = new Discord.MessageEmbed()
 .setTitle("YOUR AVATAR!")
-.setImage(`${message.author.displayAvatarURL({dynamic : true})}`)
+.setImage(`${message.author.displayAvatarURL({dynamic : true, size : 512})}`)
 .setColor("GREEN")
 .setFooter(`${message.author.username}`)
 message.channel.send(embed)
@@ -223,7 +206,7 @@ message.channel.send(embed)
 const https = require('https');
  const url = 'https://www.reddit.com/r/memes/hot/.json?limit=100';
 
- if (message.content.startsWith('d!meme')) {
+ if (message.content.startsWith('~meme')) {
  https.get(url, result => {
  var body = '';
  result.on('data', chunk => {
@@ -272,7 +255,7 @@ const https = require('https');
  });
  });
  }
- if(message.content.startsWith("d!purge")){
+ if(message.content.startsWith("~purge")){
 let arg = message.content.split(" ")
 if(message.member.hasPermission("MANAGE_MESSAGES")) {
 let clear = arg[1];
@@ -291,41 +274,7 @@ message.channel.send(`:white_check_mark: | \`Succesfully cleared ${clear} messag
 message.reply("You dont have perms!")
 } 
 }
-if (message.content.startsWith('d!ban')) {
-if(message.member.hasPermission("BAN_MEMBERS")) {
- const user = message.mentions.users.first();
- 
- if (user) {
- 
- const member = message.guild.member(user);
-
- if (member) {
-
- member
- .ban({
- reason: 'They were bad!',
- })
- .then(() => {
- // We let the message author know we were able to ban the person
- message.reply("Successfully banned ${user.tag}");
- })
- .catch(err => {
-
- message.reply("I was unable to ban the member");
- 
- console.error(err);
- });
- } else {
- 
- message.reply("That user isn't in this guild!");
- }
- } else {
- 
- message.reply("You didn't mention the user to ban!");
- }
- }
-}
-if(message.content.startsWith("d!mute")) {
+if(message.content.startsWith("~mute")) {
  if(message.member.hasPermission("ADMINISTRATOR")) {
  let member = message.mentions.members.first()
  if(!member) message.channel.send("Mention That Bastard to mute!")
@@ -338,12 +287,12 @@ if(message.content.startsWith("d!mute")) {
  message.reply("You don't have permission to do that!")
  }
 }
-if(message.content.startsWith("d!unmute")) {
+if(message.content.startsWith("~unmute")) {
  if(message.member.hasPermission("MANAGE_MESSAGES")) {
  let member = message.mentions.members.first()
  if(!member) message.channel.send("Mention Muted Person to unmute!")
  else {
- member.roles.remove("795544896407863316")
+ member.roles.remove("990840217382563880")
  message.channel.send("Member has been succesfully unmuted.")
  }
 
@@ -351,6 +300,52 @@ if(message.content.startsWith("d!unmute")) {
  message.reply("You don't have permission to do that!")
  }
 }
-});
-client.login(process.env.token);
+const messageArray = message.content.split(" ");
+const args = messageArray.slice(1);
+if (message.content.startsWith("~kick")) {
+        if (!args[0]) return message.reply("You need to put someone in this command!")
+        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === args.slice(0).join(" ") || x.user.username === args[0]);
+        if (!message.member.permissions.has("KICK_MEMBERS")) return message.reply("Where is your permission bro...");
+        if (!message.guild.me.permissions.has("KICK_MEMBERS")) return message.reply("I don't have permission to kick people!");
+        if (message.member.id === member.id) return message.reply("You can't kick yourself...");
 
+        member.kick()
+        message.channel.send(`${member} just got kicked.`)
+    }
+if (message.content.startsWith("~ban")) {
+        if (!args[0]) return message.reply("Please Mention That Member")
+        let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(x => x.user.username.toLowerCase() === args.slice(0).join(" ") || x.user.username === args[0]);
+        if (!message.member.permissions.has("BAN_MEMBERS")) return message.reply("Where is your permission bro...");
+        if (!message.guild.me.permissions.has("BAN_MEMBERS")) return message.reply("I don't have permission to ban people!");
+        if (message.member.id === member.id) return message.reply("You can't ban yourself...");
+
+        let reason = args.slice(1).join(" ") || "No reason"
+
+        member.ban({ reason: reason })
+        message.channel.send(`${member} just got banned.\nReason: ${reason}`)
+}
+module.exports = {
+    name: 'hug',
+    description: 'hug your friend',
+    async execute(message, args, Discord){
+      images = [
+        "https://tenor.com/view/come-fight-cat-punch-gif-15561222",
+        "https://tenor.com/view/mochi-cat-vans-gif-21776348"
+      ]
+      personHugged = message.mentions.users.first()
+      if(personHugged){
+      let hugEmbed = new Discord.MessageEmbed()
+          .setTitle(`You Hug ${personHugged.username} :heart:`)
+          .setImage(images[Math. floor(Math. random()*images. lenght)])
+          .setTimestamp()
+          message.channel.send(hugEmbed)
+      }
+      else{
+        message.channel.send('That person is not in this guild')
+      }
+    }
+}
+});
+
+
+client.login(process.env.Token);
